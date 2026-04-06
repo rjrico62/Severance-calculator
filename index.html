@@ -13,13 +13,14 @@
     .result { margin-top:20px; font-size:18px; font-weight:bold; }
     .small { font-size:12px; color:#666; margin-top:10px; }
     .divider { margin:16px 0; text-align:center; color:#999; }
+    .bold-note { font-weight:bold; margin-top:12px; color:#333; }
   </style>
 </head>
 <body>
   <div class="card">
     <h1>Layoff Severance Calculator</h1>
 
-    <label>Biweekly Pay ($)</label>
+    <label>Biweekly Pay ($) (The amount on your paystub)</label>
     <input type="number" id="biweeklyPay" placeholder="e.g. 3000" />
 
     <div class="divider">Enter ONE of the following</div>
@@ -35,7 +36,12 @@
     <button onclick="calculate()">Calculate</button>
 
     <div class="result" id="result"></div>
-    <div class="small">2 weeks for first 6 months + 1 week per additional 6-month period. Max 72 weeks. Full periods only.<br>Note: Enter your biweekly pay, not weekly.</div>
+    <div class="small">
+      2 weeks for first 6 months + 1 week per additional 6-month period. Max 72 weeks. Full periods only.<br>
+      Note: Enter your biweekly pay, not weekly.<br>
+      <span class="bold-note">Note: This does not include an additional 3 weeks’ pay in lieu of notice. It will also include any unused PTO.</span><br>
+      <span class="bold-note">Disclaimer: This is a tool for estimation only and cannot guarantee accuracy.</span>
+    </div>
   </div>
 
   <script>
